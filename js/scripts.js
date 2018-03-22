@@ -1,17 +1,26 @@
 $(document).ready(function() {
-  $(".form-check").submit(function(event) {
-  var mil = $("input:radio[name=military]:checked").val();
-  var legal = $("input:radio[name=samesex]:checked").val();
-  var environ = $("input:radio[name=evironment]:checked").val();
-  var sec = $("input:radio[name=second]:checked").val();
-  var banning = $("input:radio[name=ban]:checked").val();
-  var nafta = $("input:radio[name=freetrade]:checked").val();
-  var pub = $("input:radio[name=cuts]:checked").val();
-  var drug = $("input:radio[name=drugs]:checked").val();
-  var dak = $("input:radio[name=dakota]:checked").val();
+  $("form#poly").submit(function(event) {
+    event.preventDefault()
+    console.log(event);
 
-  if (mil === 1)
-  console.log(mil);
+//
+  var con = parseInt$("input:radio[name=conservative]:checked").val();
+  console.log(con);
+  var lib = parseInt$("input:radio[name=liberal]:checked").val();
+  var mod = parseInt$("input:radio[name=moderate]:checked").val();
 
+
+  var politicalScore = con + lib + mod;
+
+
+  if (politicalScore <= 9) {
+    ("#conservative").show();
+  } else if (politicalScore >= 18 && politicalScore >= 9) {
+    ("#liberal").show();
+  }
+    else if (politicalScore > 18) {
+      ("moderate").show();
+    }
 });
+
 });

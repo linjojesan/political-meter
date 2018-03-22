@@ -3,3 +3,19 @@
   width: auto;
   text-align: center;
 }
+
+#conservative {
+  display: none;
+}
+
+#liberal {
+  display: none;
+}
+
+#moderate {
+  display: none;
+}
+
+/*form {
+  background-color: green;
+}*/
